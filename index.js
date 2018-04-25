@@ -11,8 +11,9 @@ function logDriversByHometown(drivers, hometown) {
   });
 }
 
-function driversByRevenue() {
-
+function driversByRevenue(drivers) {
+  const driversCopy = drivers.slice();
+  return driversCopy.sort(function (a,b) { return a.name.localeCompare(b.name); });
 }
 
 function driversByName() {

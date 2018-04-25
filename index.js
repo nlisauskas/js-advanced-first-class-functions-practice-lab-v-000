@@ -17,7 +17,8 @@ function driversByRevenue(drivers) {
 }
 
 function driversByName(drivers) {
-  
+  const driversCopy = drivers.slice();
+  return driversCopy.sort(function (a,b) { return a.name.localeCompare(b.name); });
 }
 
 function totalRevenue() {
